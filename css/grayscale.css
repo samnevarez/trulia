@@ -9,12 +9,13 @@
   padding: 0;
   border: solid red .25px;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 /* Body */
 body {
-  font-family: 'Nunito', Arial, sans-serif;
-  font-size: 12px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,7 +25,6 @@ h1, h2, h3, h4, h5, h6 {
 h3 {
   font-weight: bold;
   font-size: 14px;
-  text-align: center;
   padding: 8px 0;
 }
 
@@ -33,23 +33,6 @@ h2 {
   font-weight: bold;
   font-size: 32px;
   text-align: center;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin: 16px 0;
-  text-align: center;
-}
-
-.strike {
-  text-decoration: line-through;
-}
-
-.under-prm {
-  text-decoration: underline;
-  -webkit-text-decoration-color: red;
-          text-decoration-color: red;
 }
 
 .container {
@@ -110,7 +93,7 @@ header nav a:last-child {
 }
 
 /* Button */
-button {
+/* button {
   background-color: #ff5358;
   border: solid 2px #ff5358;
   border-bottom: 2px solid #e00007;
@@ -125,129 +108,107 @@ button {
   font-weight: bold;
   width: 120px;
   margin: 0 auto;
-}
-
+} */
 /* Hero */
-.hero {
-  display: -webkit-box;
+/* .hero {
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 60vh;
   position: relative;
   overflow: hidden;
   background-color: #333;
-}
+  
+  :before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .2;
+    background: center center no-repeat url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/melbourne.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
-.hero :before {
-  content: ' ';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: .2;
-  background: center center no-repeat url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/melbourne.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
+  .content {
+    width: 400px;
+    min-width: 300px;
+    height: auto;
+    padding: 32px;
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-.hero .content {
-  width: 400px;
-  min-width: 300px;
-  height: auto;
-  padding: 32px;
-  text-align: center;
-  z-index: 2;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -webkit-box-align: center;
-          align-items: center;
-}
+    h1 {
+      font-weight: bold;
+      font-size: 64px;
+      color: white;
+      margin: 16px 0;
+      line-height: 24px;
+      text-align: center;
+    }
 
-.hero .content h1 {
-  font-weight: bold;
-  font-size: 64px;
-  color: white;
-  margin: 16px 0;
-  line-height: 24px;
-  text-align: center;
-}
-
-.hero .content h2 {
-  font-weight: bold;
-  font-size: 16px;
-  color: white;
-  margin: 16px 0;
-  line-height: 24px;
-  text-align: center;
-}
-
+    h2 {
+      font-weight: bold;
+      font-size: 16px;
+      color: white;
+      margin: 16px 0;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+} */
 /* Local */
-.local-blocks {
-  display: -webkit-box;
+/* .local-blocks {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-          justify-content: space-evenly;
-}
+  flex-direction: row;
+  justify-content: space-evenly;
+  
+  .card:nth-child(1){
+    margin-right: 40px;
+  }
+  
+  .trulia-grid-item {
+    border: 1px solid #dbdbdb;
+    display: flex;
+    flex-direction: column;
 
-.local-blocks .card:nth-child(1) {
-  margin-right: 40px;
-}
+    .local-title {
+      padding: 16px;
+      background: #edefed;
+      font-weight: bold;
+    }
 
-.local-blocks .trulia-grid-item {
-  border: 1px solid #dbdbdb;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-}
+    .local-content {
+      display: flex;
+      flex-direction: row;
+      height: auto;
+      padding: 16px 16px;
+      align-content: center;
 
-.local-blocks .trulia-grid-item .local-title {
-  padding: 16px;
-  background: #edefed;
-  font-weight: bold;
-}
+      span {
+        font-size: 12px;
+        line-height: 1.5rem;
+      }
+    }
 
-.local-blocks .trulia-grid-item .local-content {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  height: auto;
-  padding: 16px 16px;
-  align-content: center;
-}
-
-.local-blocks .trulia-grid-item .local-content span {
-  font-size: 12px;
-  line-height: 1.5rem;
-}
-
-.local-blocks .trulia-grid-item .local-content img {
-  display: block;
-  height: auto;
-  width: 64px;
-  padding-right: 12px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
+    .local-content img{
+      display: block;
+      height: auto;
+      width: 64px;
+      padding-right: 12px;
+      object-fit: contain;
+    }
+  }
+} */
 .block-wrapper {
-  max-width: 1160px;
   width: 100%;
   height: auto;
   display: block;
@@ -258,31 +219,24 @@ button {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  -webkit-box-align: center;
-          align-items: center;
   box-sizing: border-box;
+  background: #e3e4e6;
 }
 
-.featured-blocks {
-  background: white;
+.listing-blocks {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
           flex-direction: row;
-  grid-gap: 16px 40px;
+  grid-gap: 16px 16px;
   margin: 16px 0;
   height: auto;
 }
 
-.featured-blocks .featured-content {
-  background: #EFEFEF;
-  padding: 16px;
-  height: 56px;
-}
-
-.featured-blocks .featured-img {
-  height: 220px;
+.listing-blocks .trulia-house-image {
+  max-width: 100%;
+  height: 130px;
   position: relative;
   display: -webkit-box;
   display: flex;
@@ -290,48 +244,50 @@ button {
           align-items: center;
   -webkit-box-pack: center;
           justify-content: center;
+  background: red;
+  overflow: hidden;
 }
 
-.featured-blocks .featured-img:before {
-  content: ' ';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
+.listing-blocks .trulia-house-image img {
   width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 1;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
 }
 
-.featured-blocks .featured-img .featured-img-title {
-  z-index: 2;
-  position: relative;
-}
-
-.featured-blocks .card {
+.listing-blocks .card {
   -webkit-box-pack: space-evenly;
           justify-content: space-evenly;
   border: 1px solid #dbdbdb;
 }
 
-.featured-blocks .card p {
+.listing-blocks .card ul {
+  list-style: none;
+}
+
+.listing-blocks .card p {
   margin: 0px 0 24px 0;
 }
 
-.featured-blocks .card:nth-child(1) .featured-img:nth-child(1):before {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/fitzroy.jpg);
+.listing-blocks .trulia-house-facts {
+  padding: 8px;
+  background-color: white;
 }
 
-.featured-blocks .card:nth-child(2) .featured-img:nth-child(1):before {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/st-kilda.jpg);
+.listing-blocks .trulia-house-facts img {
+  height: 16px;
 }
 
-.featured-blocks .card:nth-child(3) .featured-img:nth-child(1):before {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/central-business-district.jpg);
+.listing-blocks .trulia-house-stats ul {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  margin-right: 16px;
+}
+
+.listing-blocks .trulia-house-stats ul li {
+  margin-right: 8px;
 }
 
 footer {
@@ -346,6 +302,31 @@ footer .content {
   padding: 24px 16px;
   text-align: center;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .listing-blocks {
+    display: grid;
+    grid-template-columns: 1fr;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    grid-gap: 16px 16px;
+    margin: 16px 0;
+    height: auto;
+  }
+  .listing-blocks .trulia-house-image {
+    max-width: 100%;
+    height: 180px;
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    overflow: hidden;
+  }
 }
 
 /* Background image links */

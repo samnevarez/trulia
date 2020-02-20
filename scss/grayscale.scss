@@ -3,6 +3,7 @@
   padding: 0;
   border: solid red .25px;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 // variables
@@ -12,8 +13,8 @@ $green: #20c063;
 /* Body */
 
 body {
-  font-family: 'Nunito', Arial, sans-serif;
-  font-size: 12px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -23,7 +24,6 @@ h1, h2, h3, h4, h5, h6 {
 h3 {
   font-weight: bold;
   font-size: 14px;
-  text-align: center;
   padding: 8px 0;
 }
 
@@ -32,22 +32,6 @@ h2 {
   font-weight: bold;
   font-size: 32px;
   text-align: center;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin: 16px 0;
-  text-align: center;
-}
-
-.strike{
-  text-decoration: line-through;
-}
-
-.under-prm {
-  text-decoration: underline;
-  text-decoration-color: red;
 }
 
 .container {
@@ -102,7 +86,7 @@ header {
 
 /* Button */
 
-button {
+/* button {
   background-color: #ff5358;
   border: solid 2px #ff5358;
   border-bottom: 2px solid #e00007;
@@ -117,11 +101,11 @@ button {
   font-weight: bold;
   width: 120px;
   margin: 0 auto;
-}
+} */
 
 /* Hero */
 
-.hero {
+/* .hero {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,11 +159,11 @@ button {
       text-align: center;
     }
   }
-}
+} */
 
 /* Local */
 
-.local-blocks {
+/* .local-blocks {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -220,10 +204,9 @@ button {
       object-fit: contain;
     }
   }
-}
+} */
 
 .block-wrapper {
-  max-width: 1160px;
   width: 100%;
   height: auto;
   display: block;
@@ -231,81 +214,64 @@ button {
   padding: 0 16px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   box-sizing: border-box;
+  background: #e3e4e6;
 }
 
-.featured-blocks {
-  background: white;
+.listing-blocks {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   flex-direction: row;
-  grid-gap: 16px 40px;
+  grid-gap: 16px 16px;
   margin: 16px 0;
   height: auto;
 
-  .featured-content {
-    background: #EFEFEF;
-    padding: 16px;
-    height: 56px;
-  }
-
-  .featured-img {
-    height: 220px;
+  .trulia-house-image {
+    max-width: 100%;
+    height: 130px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-  
-    &:before {
-      content: ' ';
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
+    background: red;
+    overflow: hidden;
+    
+    img {
       width: 100%;
-      height: 100%;
-      z-index: 1;
-      opacity: 1;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      }
-  
-    .featured-img-title {
-      z-index: 2;
-      position: relative;
     }
   }
 
   .card {
     justify-content: space-evenly;
     border: 1px solid #dbdbdb;
+    // border-radius: 8px;
+
+    ul {
+      list-style: none;
+    }
 
     p {
       margin: 0px 0 24px 0;
     }
   }
 
-  .card:nth-child(1) {
-    .featured-img:nth-child(1){
-      &:before {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/fitzroy.jpg);
-      }
+  .trulia-house-facts {
+    padding: 8px;
+    background-color: white;
+
+    img {
+      height: 16px;
     }
   }
-  .card:nth-child(2) {
-    .featured-img:nth-child(1){
-      &:before {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/st-kilda.jpg);
-      }
-    }
-  }
-  .card:nth-child(3) {
-    .featured-img:nth-child(1){
-      &:before {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/central-business-district.jpg);
-      }
+
+  .trulia-house-stats ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-right: 16px;
+    
+    li {
+      margin-right: 8px;
     }
   }
 }
@@ -322,7 +288,27 @@ footer {
     margin: 0 auto;
   }
 }
+@media (max-width: 768px) {
 
+.listing-blocks {
+  display: grid;
+  grid-template-columns: 1fr;
+  flex-direction: row;
+  grid-gap: 16px 16px;
+  margin: 16px 0;
+  height: auto;
+
+    .trulia-house-image {
+      max-width: 100%;
+      height: 180px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+  }
+}
 /* Background image links */
 /* Hero: https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/melbourne.jpg */
 /* Fitzroy: https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/fitzroy.jpg */
